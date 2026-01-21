@@ -151,8 +151,8 @@ When creating your resume with this skill:
 ## 🔧 Dependencies
 
 - `markdown>=3.4.0` - Markdown to HTML conversion
-- `weasyprint>=59.0` - HTML to PDF rendering
-- `Pillow>=10.0.0` - Image processing support
+- `weasyprint>=68.0` - HTML to PDF rendering (security patched)
+- `Pillow>=10.2.0` - Image processing support (security patched)
 - `cffi>=1.15.0` - Foreign function interface
 
 ## 📄 License
