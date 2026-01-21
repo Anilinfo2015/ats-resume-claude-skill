@@ -76,24 +76,24 @@ def create_styled_html(html_content):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Resume</title>
         <style>
-            /* ATS-Friendly Resume Styling */
+            /* ATS-Friendly Resume Styling - Industry Standards for Google, Meta, Facebook */
             @page {{
                 size: letter;
-                margin: 0.5in;
+                margin: 0.75in;  /* Standard: 0.5-1 inch, using 0.75 for balance */
             }}
             
             body {{
-                font-family: 'Arial', 'Helvetica', sans-serif;
-                font-size: 11pt;
-                line-height: 1.4;
-                color: #000000;
+                font-family: 'Arial', 'Helvetica', sans-serif;  /* ATS-safe fonts */
+                font-size: 11pt;  /* Body text: 10-12pt, using 11pt for readability */
+                line-height: 1.15;  /* Industry standard: 1.0-1.15 */
+                color: #000000;  /* Black text only for ATS */
                 max-width: 8.5in;
                 margin: 0 auto;
                 background: white;
             }}
             
             h1 {{
-                font-size: 24pt;
+                font-size: 18pt;  /* Name: 16-18pt */
                 font-weight: bold;
                 margin: 0 0 8pt 0;
                 color: #000000;
@@ -103,9 +103,9 @@ def create_styled_html(html_content):
             }}
             
             h2 {{
-                font-size: 14pt;
+                font-size: 14pt;  /* Section headings: 14-16pt */
                 font-weight: bold;
-                margin: 16pt 0 8pt 0;
+                margin: 16pt 0 8pt 0;  /* 16pt spacing between sections */
                 padding-bottom: 4pt;
                 border-bottom: 2px solid #000000;
                 color: #000000;
@@ -114,7 +114,7 @@ def create_styled_html(html_content):
             }}
             
             h3 {{
-                font-size: 12pt;
+                font-size: 12pt;  /* Sub-headings */
                 font-weight: bold;
                 margin: 10pt 0 4pt 0;
                 color: #000000;
@@ -122,7 +122,7 @@ def create_styled_html(html_content):
             
             p {{
                 margin: 4pt 0;
-                text-align: justify;
+                line-height: 1.15;  /* Consistent with body */
             }}
             
             strong {{
@@ -133,11 +133,12 @@ def create_styled_html(html_content):
             ul {{
                 margin: 4pt 0 8pt 0;
                 padding-left: 20pt;
+                line-height: 1.15;
             }}
             
             li {{
-                margin: 2pt 0;
-                line-height: 1.4;
+                margin-bottom: 6pt;  /* 6-8pt spacing after bullets */
+                line-height: 1.15;
             }}
             
             hr {{
