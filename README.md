@@ -75,6 +75,20 @@ Once you have your Markdown resume, convert it to PDF:
 python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md
 ```
 
+#### (Optional) Convert to HTML
+
+If you want an HTML version (useful for sharing, web uploads, or printing from a browser):
+
+```bash
+python .claude/skills/ats-resume-builder/scripts/convert_to_html.py resume.md -o resume.html
+```
+
+To generate HTML without the default embedded styling:
+
+```bash
+python .claude/skills/ats-resume-builder/scripts/convert_to_html.py resume.md -o resume.html --no-style
+```
+
 Or specify a custom output name:
 
 ```bash
