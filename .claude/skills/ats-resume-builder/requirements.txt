@@ -1,0 +1,10 @@
+# ATS Resume Builder - Requirements
+
+# Core dependencies for PDF conversion
+markdown>=3.4.0
+weasyprint>=68.0
+
+# Additional dependencies for weasyprint
+# Security: Using Pillow 10.2.0+ to address CVE vulnerabilities
+Pillow>=10.2.0
+cffi>=1.15.0
