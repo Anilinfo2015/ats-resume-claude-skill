@@ -1,10 +1,11 @@
-# ATS Resume Builder - Claude AI Skill
+---
+name: ATS Resume Builder
+description: Interview users to collect professional information, generate ATS-optimized resumes in Markdown format, and convert them to PDF.
+version: 1.0.0
+author: Claude AI
+---
 
-## Skill Metadata
-- **Name**: ATS Resume Builder
-- **Version**: 1.0.0
-- **Author**: Claude AI
-- **Description**: Interview users to collect professional information, generate ATS-optimized resumes in Markdown format, and convert them to PDF.
+# ATS Resume Builder - Claude AI Skill
 
 ## Purpose
 This skill enables Claude AI to:
@@ -211,9 +212,9 @@ When generating the resume, follow these best practices:
 
 3. **Generate PDF**
    - Once the user approves the resume, inform them that you'll convert it to PDF
-   - Execute the PDF conversion script:
+   - Execute the PDF conversion script from the skill directory:
    ```bash
-   python scripts/convert_to_pdf.py resume.md -o resume.pdf
+   python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o resume.pdf
    ```
    - Inform the user that their PDF resume is ready for download
 
@@ -223,7 +224,7 @@ The skill includes a Python script (`scripts/convert_to_pdf.py`) that converts t
 
 ### Usage:
 ```bash
-python scripts/convert_to_pdf.py <input_markdown_file> -o <output_pdf_file>
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py <input_markdown_file> -o <output_pdf_file>
 ```
 
 ### Features:
@@ -254,6 +255,19 @@ python scripts/convert_to_pdf.py <input_markdown_file> -o <output_pdf_file>
 - If the PDF conversion fails, provide the Markdown file to the user as a backup
 - If information is missing, make reasonable assumptions or ask the user
 - If the user is unsure about something, offer to skip it or come back to it later
+
+## Dependencies
+
+The PDF conversion script requires Python 3.8+ and the following packages (see `requirements.txt`):
+- markdown>=3.4.0
+- weasyprint>=68.0 (security patched)
+- Pillow>=10.2.0 (security patched)
+- cffi>=1.15.0
+
+Install with:
+```bash
+pip install -r .claude/skills/ats-resume-builder/requirements.txt
+```
 
 ## Version History
 

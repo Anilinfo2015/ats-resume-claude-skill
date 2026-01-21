@@ -12,14 +12,22 @@ A comprehensive Claude AI skill for creating ATS (Applicant Tracking System) opt
 
 ## 📁 Repository Structure
 
+This repository follows the standard Claude skills directory structure:
+
 ```
 ats-resume-claude-skill/
-├── SKILL.md                 # Complete skill instructions for Claude AI
-├── requirements.txt         # Python dependencies
-├── scripts/
-│   └── convert_to_pdf.py   # PDF conversion script
-└── README.md               # This file
+├── .claude/
+│   └── skills/
+│       └── ats-resume-builder/
+│           ├── SKILL.md             # Complete skill instructions for Claude AI
+│           ├── requirements.txt     # Python dependencies
+│           └── scripts/
+│               └── convert_to_pdf.py  # PDF conversion script
+├── README.md                         # This file
+└── EXAMPLE.md                        # Usage examples
 ```
+
+The skill is organized in the `.claude/skills/` directory following Claude's standard skill structure, making it easy to integrate into any project.
 
 ## 🚀 Quick Start
 
@@ -38,7 +46,7 @@ cd ats-resume-claude-skill
 
 2. Install required dependencies:
 ```bash
-pip install -r requirements.txt
+pip install -r .claude/skills/ats-resume-builder/requirements.txt
 ```
 
 ### Usage
@@ -55,19 +63,19 @@ Interact with Claude AI and ask it to help you create an ATS-optimized resume. C
 Once you have your Markdown resume, convert it to PDF:
 
 ```bash
-python scripts/convert_to_pdf.py resume.md
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md
 ```
 
 Or specify a custom output name:
 
 ```bash
-python scripts/convert_to_pdf.py resume.md -o my_resume.pdf
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o my_resume.pdf
 ```
 
 For verbose output:
 
 ```bash
-python scripts/convert_to_pdf.py resume.md -o my_resume.pdf -v
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o my_resume.pdf -v
 ```
 
 ## 📝 How It Works
@@ -107,7 +115,7 @@ The conversion script creates professional PDFs with:
 The `convert_to_pdf.py` script supports the following options:
 
 ```bash
-python scripts/convert_to_pdf.py [-h] [-o OUTPUT] [-v] input
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py [-h] [-o OUTPUT] [-v] input
 
 Arguments:
   input                 Path to the input Markdown file
@@ -122,18 +130,18 @@ Options:
 
 ### Example 1: Basic Conversion
 ```bash
-python scripts/convert_to_pdf.py resume.md
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md
 # Creates resume.pdf in the same directory
 ```
 
 ### Example 2: Custom Output Location
 ```bash
-python scripts/convert_to_pdf.py resume.md -o ~/Documents/john_doe_resume.pdf
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o ~/Documents/john_doe_resume.pdf
 ```
 
 ### Example 3: Verbose Mode
 ```bash
-python scripts/convert_to_pdf.py resume.md -v
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -v
 # Shows detailed progress of the conversion process
 ```
 
@@ -169,7 +177,7 @@ Contributions are welcome! Feel free to:
 
 ## 💡 Tips for Success
 
-- **Review the SKILL.md**: It contains comprehensive instructions for Claude
+- **Review the SKILL.md**: Located at `.claude/skills/ats-resume-builder/SKILL.md`, it contains comprehensive instructions for Claude
 - **Iterate**: Don't hesitate to refine your resume multiple times
 - **Test ATS Compatibility**: Use online ATS checkers to verify your resume
 - **Keep It Updated**: Regularly update your resume with new achievements
@@ -178,9 +186,25 @@ Contributions are welcome! Feel free to:
 ## 📞 Support
 
 For issues or questions:
-1. Check the SKILL.md documentation
-2. Review the script help: `python scripts/convert_to_pdf.py --help`
+1. Check the SKILL.md documentation in `.claude/skills/ats-resume-builder/SKILL.md`
+2. Review the script help: `python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py --help`
 3. Open an issue on GitHub
+
+## 🔧 Using as a Claude Skill
+
+This repository is structured as a proper Claude skill. To use it:
+
+1. **For Claude Code/Projects**: Simply clone this repository and the skill will be available in the `.claude/skills/` directory
+2. **For Standalone Use**: The skill can be copied into any project's `.claude/skills/` directory
+3. **Metadata**: The SKILL.md file includes YAML frontmatter with name and description for Claude to discover and use the skill
+
+### Claude Skill Structure
+
+The skill follows the standard Claude directory structure:
+- **`.claude/skills/ats-resume-builder/`**: Skill root directory
+- **`SKILL.md`**: Main skill instructions with YAML frontmatter
+- **`scripts/`**: Supporting Python scripts for PDF conversion
+- **`requirements.txt`**: Python dependencies
 
 ---
 

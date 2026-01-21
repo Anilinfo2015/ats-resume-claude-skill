@@ -57,7 +57,7 @@ Passionate about creating scalable solutions and improving user experiences.
 ### Step 2: Convert to PDF
 
 ```bash
-python scripts/convert_to_pdf.py demo_resume.md
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py demo_resume.md
 ```
 
 This creates `demo_resume.pdf` with professional formatting.
@@ -89,7 +89,7 @@ Open the PDF and verify:
 Once Claude generates your resume:
 
 1. Claude will save it as `resume.md`
-2. Claude will tell you to run: `python scripts/convert_to_pdf.py resume.md`
+2. Claude will tell you to run: `python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md`
 3. You'll get a professional `resume.pdf`
 
 ## Advanced Usage
@@ -97,13 +97,13 @@ Once Claude generates your resume:
 ### Custom Output Name
 
 ```bash
-python scripts/convert_to_pdf.py resume.md -o jane_smith_resume_2026.pdf
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o jane_smith_resume_2026.pdf
 ```
 
 ### Verbose Mode (See Progress)
 
 ```bash
-python scripts/convert_to_pdf.py resume.md -v
+python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -v
 ```
 
 Output:
@@ -134,7 +134,7 @@ Step 4: Generating PDF...
 ### Error: Required package not found
 
 ```bash
-pip install -r requirements.txt
+pip install -r .claude/skills/ats-resume-builder/requirements.txt
 ```
 
 ### PDF Not Generated
@@ -146,7 +146,7 @@ pip install -r requirements.txt
 
 ## Next Steps
 
-1. Review the full instructions in `SKILL.md`
+1. Review the full instructions in `.claude/skills/ats-resume-builder/SKILL.md`
 2. Read the comprehensive documentation in `README.md`
 3. Start creating your resume with Claude!
 
