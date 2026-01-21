@@ -177,11 +177,6 @@ def create_styled_html(html_content):
             ul {{
                 page-break-inside: avoid;
             }}
-            
-            /* Skills section - compact formatting */
-            h2:contains("SKILLS") + p {{
-                margin: 2pt 0;
-            }}
         </style>
     </head>
     <body>
