@@ -212,10 +212,11 @@ When generating the resume, follow these best practices:
 
 3. **Generate PDF**
    - Once the user approves the resume, inform them that you'll convert it to PDF
-   - Execute the PDF conversion script from the skill directory:
+   - Execute the PDF conversion script from the project root:
    ```bash
    python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o resume.pdf
    ```
+   - Note: Run this command from your project root directory where the resume.md file is located
    - Inform the user that their PDF resume is ready for download
 
 ## PDF Conversion
@@ -271,4 +272,4 @@ pip install -r .claude/skills/ats-resume-builder/requirements.txt
 
 ## Version History
 
-- **v1.0.0** (2026-01-21): Initial release with interview mode, parsing mode, and PDF conversion
+- **v1.0.0** (2024-01-21): Initial release with interview mode, parsing mode, and PDF conversion

@@ -217,9 +217,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python convert_to_pdf.py resume.md
-  python convert_to_pdf.py resume.md -o my_resume.pdf
-  python convert_to_pdf.py input.md --output output.pdf
+  python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md
+  python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py resume.md -o my_resume.pdf
+  python .claude/skills/ats-resume-builder/scripts/convert_to_pdf.py input.md --output output.pdf
 
 The script will create an ATS-optimized PDF with:
 - Clean, professional formatting
