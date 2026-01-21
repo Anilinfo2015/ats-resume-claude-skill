@@ -1,0 +1,9 @@
+# ATS Resume Builder - Requirements
+
+# Core dependencies for PDF conversion
+markdown>=3.4.0
+weasyprint>=59.0
+
+# Additional dependencies for weasyprint
+Pillow>=10.0.0
+cffi>=1.15.0
