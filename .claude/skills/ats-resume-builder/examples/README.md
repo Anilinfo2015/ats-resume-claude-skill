@@ -21,6 +21,12 @@ This directory contains sample inputs and outputs to help Claude understand the 
 - **Purpose:** Shows transformation from poorly formatted resume to ATS-optimized version
 - **Highlights:** Common mistakes and how to fix them
 
+### 4. **Existing Resume Analysis Workflow**
+- **Input:** `input-existing-resume-unoptimized.md` - User's existing resume.md file with issues
+- **Workflow:** `resume-analysis-workflow.md` - Complete analysis and optimization process
+- **Purpose:** Demonstrates how Claude analyzes and improves existing resumes
+- **Shows:** Question flow, analysis report, optimization steps
+
 ## How to Use These Examples
 
 ### For Claude AI

@@ -81,16 +81,155 @@ When a user requests to create a resume from scratch:
    - Confirm all details are accurate
 
 ### Option 2: Resume Parsing Mode
-When a user provides an existing resume:
+When a user provides an existing resume (either as text, document, or resume.md file):
 
-1. **Parse the Resume**
-   - Extract all relevant information from the provided document
-   - Organize data into structured sections
+1. **Read the Resume File**
+   - If user provides a resume.md file, read and parse the content
+   - If user shares text/document, extract the information
+   - Identify all sections: contact info, summary, experience, education, skills, etc.
+
+2. **Analyze for ATS Compatibility**
+   - Check formatting (single column, standard headers, simple bullets)
+   - Verify quantifiable achievements in work experience
+   - Assess keyword usage and relevance
+   - Identify missing information (dates, locations, metrics)
+   - Review action verbs and impact statements
    
-2. **Confirm and Enhance**
-   - Present the parsed information to the user
-   - Ask if they want to add or modify any information
-   - Suggest improvements for ATS optimization
+3. **Present Analysis Results**
+   Show the user:
+   - ✅ **Strengths:** What's already ATS-optimized
+   - ⚠️ **Issues:** Problems that need fixing
+   - 💡 **Suggestions:** Specific improvements
+   
+   Example feedback format:
+   ```
+   **ATS Analysis Results:**
+   
+   ✅ Strengths:
+   - Clean, simple formatting
+   - Standard section headers
+   - Contact information complete
+   
+   ⚠️ Issues Found:
+   - Missing quantifiable metrics in 8/12 bullets
+   - Weak action verbs ("helped", "worked on", "was responsible for")
+   - No specific technologies mentioned in 2 positions
+   - Education section missing GPA/coursework
+   
+   💡 Suggested Improvements:
+   1. Add metrics: "How many users/customers did this impact?"
+   2. Replace weak verbs with: Developed, Implemented, Led, Optimized
+   3. Specify technologies: Instead of "various tools", list actual tech stack
+   4. Add quantifiable achievements for each role
+   ```
+
+4. **Gather Missing Information**
+   - Ask targeted questions to fill gaps
+   - Request quantifiable metrics for achievements
+   - Clarify technologies and tools used
+   - Get specific dates, locations, or other missing details
+   
+   Example questions:
+   ```
+   "For your role at TechCorp where you mention 'improved performance', 
+   can you tell me:
+   - What specific metric improved? (response time, throughput, etc.)
+   - By what percentage or amount?
+   - How many users benefited from this improvement?"
+   ```
+
+5. **Generate Optimized Version**
+   - Create ATS-optimized version with improvements
+   - Maintain user's original information and achievements
+   - Enhance with proper formatting, keywords, and metrics
+   - Present side-by-side comparison if helpful
+
+6. **Iterative Refinement**
+   - Allow user to request specific changes
+   - Adjust emphasis on certain skills or experiences
+   - Tailor for specific job applications if needed
+
+### Option 3: Resume.md File Analysis Workflow
+
+When user has an existing `resume.md` file:
+
+1. **File Input**
+   ```
+   User: "I have a resume.md file. Can you analyze and optimize it for ATS?"
+   Claude: "I'll analyze your resume.md file for ATS compatibility. Please share 
+   the file content or let me know the file path."
+   ```
+
+2. **Read and Parse**
+   - Read the complete resume.md file
+   - Extract all sections systematically
+   - Identify current structure and formatting
+
+3. **Comprehensive Analysis**
+   Evaluate across multiple dimensions:
+   
+   **Format Check:**
+   - Single-column layout ✓/✗
+   - Standard section headers ✓/✗
+   - Simple bullet points ✓/✗
+   - No tables/columns/graphics ✓/✗
+   - Consistent date format ✓/✗
+   
+   **Content Quality:**
+   - Action verbs used ✓/✗
+   - Quantifiable metrics ✓/✗
+   - Specific technologies mentioned ✓/✗
+   - Business impact stated ✓/✗
+   - Complete information (dates, locations) ✓/✗
+   
+   **ATS Optimization:**
+   - Keywords present ✓/✗
+   - Standard job titles ✓/✗
+   - Proper contact info ✓/✗
+   - Professional summary effective ✓/✗
+
+4. **Generate Optimization Report**
+   ```
+   **Resume Analysis Report**
+   
+   Overall ATS Score: 65/100
+   
+   📊 Breakdown:
+   - Format: 85/100 (Good structure, minor issues)
+   - Content: 55/100 (Needs more metrics and impact)
+   - Keywords: 60/100 (Could be improved)
+   - Completeness: 70/100 (Missing some details)
+   
+   🔴 Critical Issues (Must Fix):
+   1. 10 out of 15 bullets lack quantifiable metrics
+   2. 3 positions missing specific technologies used
+   3. Professional summary is too generic
+   
+   🟡 Improvements (Should Fix):
+   1. Replace 5 weak action verbs with stronger alternatives
+   2. Add more industry-specific keywords
+   3. Include months in date ranges (not just years)
+   
+   🟢 Good Practices (Keep):
+   1. Clean, single-column layout
+   2. Standard section headers
+   3. Complete contact information
+   ```
+
+5. **Interactive Optimization**
+   - Ask clarifying questions for each issue
+   - Gather additional information needed
+   - Get user approval before making changes
+
+6. **Generate Optimized resume.md**
+   - Create new version: `resume_optimized.md`
+   - Or overwrite original with user permission
+   - Maintain all original achievements, just enhanced
+
+7. **Provide Comparison**
+   - Show before/after for key sections
+   - Highlight improvements made
+   - Explain reasoning for changes
 
 ## ATS Optimization Guidelines
 
